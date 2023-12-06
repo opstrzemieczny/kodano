@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/promotion" method="GET">
+        <service class="Vendor\Module\Api\PromotionApiInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/promotion/:id" method="GET">
+        <service class="Vendor\Module\Api\PromotionApiInterface" method="getPromotion"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/promotion" method="POST">
+        <service class="Vendor\Module\Api\PromotionApiInterface" method="addPromotion"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/promotion/:id" method="DELETE">
+        <service class="Vendor\Module\Api\PromotionApiInterface" method="deletePromotion"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
