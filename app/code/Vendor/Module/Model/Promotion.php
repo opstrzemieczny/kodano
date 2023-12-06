@@ -1,5 +1,3 @@
-// app/code/Vendor/Module/Model/Promotion.php
-
 <?php
 
 namespace Vendor\Module\Model;
